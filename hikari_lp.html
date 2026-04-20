@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>交通事故治療【自己負担0円】ひかり鍼灸整骨院｜姫路市飾磨区</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&family=Noto+Sans+JP:wght@300;400;700&family=Cormorant+Garamond:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+<style>
+:root{--gold:#c9a84c;--gl:#e8cc84;--cream:#faf7f0;--dark:#111009;--mid:#1e1b12;--char:#181610;--muted:#7a7264;--red:#c0392b;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Noto Sans JP',sans-serif;background:var(--dark);color:var(--cream);overflow-x:hidden;}
+.sticky{position:fixed;bottom:0;left:0;right:0;z-index:999;display:flex;background:rgba(10,9,7,.97);border-top:1px solid rgba(201,168,76,.28);backdrop-filter:blur(10px);}
+.sticky a{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;padding:15px 10px;font-size:.9rem;font-weight:700;text-decoration:none;transition:background .2s;letter-spacing:.04em;}
+.sticky a.tel{color:var(--gold);border-right:1px solid rgba(201,168,76,.18);}
+.sticky a.tel:hover{background:rgba(201,168,76,.07);}
+.sticky a.lin{background:#06c755;color:#fff;}
+.sticky a.lin:hover{background:#04a844;}
+.sticky svg{width:18px;height:18px;flex-shrink:0;}
+.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding:70px 24px 108px;overflow:hidden;}
+.hbg{position:absolute;inset:0;background:radial-gradient(ellipse 60% 55% at 88% 32%,rgba(201,168,76,.12) 0%,transparent 65%),radial-gradient(ellipse 65% 55% at 4% 88%,rgba(192,57,43,.07) 0%,transparent 58%),linear-gradient(148deg,#0c0b09 0%,#181510 52%,#1c1a10 100%);}
+.hline{position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(to bottom,transparent,var(--gold) 38%,var(--gold) 62%,transparent);animation:glow 3s ease-in-out infinite alternate;}
+@keyframes glow{from{opacity:.3;}to{opacity:1;box-shadow:0 0 14px var(--gold);}}
+.hi{position:relative;max-width:680px;margin:0 auto;animation:fu .9s ease both;}
+@keyframes fu{from{opacity:0;transform:translateY(26px);}to{opacity:1;transform:none;}}
+.badge{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--gold);padding:5px 14px;font-size:.68rem;letter-spacing:.18em;color:var(--gold);margin-bottom:24px;}
+.dot{width:6px;height:6px;background:var(--gold);border-radius:50%;animation:blink 1.8s ease infinite;}
+@keyframes blink{0%,100%{opacity:1;}50%{opacity:.3;transform:scale(.6);}}
+.hen{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(.68rem,1.7vw,.82rem);letter-spacing:.28em;color:rgba(201,168,76,.7);margin-bottom:13px;}
+.htitle{font-family:'Noto Serif JP',serif;font-size:clamp(1.9rem,6vw,3.6rem);font-weight:900;line-height:1.2;margin-bottom:8px;}
+.htitle .g{color:var(--gold);display:block;}
+.htitle .s{display:block;font-size:clamp(1rem,2.8vw,1.7rem);font-weight:700;color:rgba(250,247,240,.8);margin-top:10px;}
+.hzero{display:inline-flex;align-items:center;gap:10px;background:rgba(192,57,43,.11);border:1px solid rgba(192,57,43,.38);padding:10px 18px;margin:18px 0 22px;font-size:.87rem;font-weight:700;color:#e74c3c;}
+.hzero-dot{display:inline-block;width:8px;height:8px;background:#e74c3c;border-radius:50%;animation:blink 1.2s ease infinite;flex-shrink:0;}
+.hdesc{font-size:clamp(.83rem,1.9vw,.94rem);line-height:1.95;color:rgba(250,247,240,.68);margin-bottom:34px;max-width:500px;}
+.hdesc strong{color:var(--gl);}
+.hctas{display:flex;flex-wrap:wrap;gap:13px;margin-bottom:36px;}
+.btng{display:inline-flex;align-items:center;gap:10px;background:var(--gold);color:#0f0e0e;font-weight:700;font-size:1rem;padding:16px 26px;text-decoration:none;transition:all .25s;}
+.btng:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(201,168,76,.36);filter:brightness(1.06);}
+.btnl{display:inline-flex;align-items:center;gap:10px;background:#06c755;color:#fff;font-weight:700;font-size:1rem;padding:16px 26px;text-decoration:none;transition:all .25s;}
+.btnl:hover{background:#04a844;transform:translateY(-2px);}
+.htrust{display:flex;flex-wrap:wrap;gap:13px;row-gap:9px;}
+.chip{display:flex;align-items:center;gap:6px;font-size:.74rem;color:rgba(250,247,240,.54);}
+.chip-check{color:var(--gold);font-weight:700;}
+.urg{background:linear-gradient(135deg,#160709,#220b0b);border-top:2px solid var(--red);padding:28px 24px;text-align:center;}
+.urg-t{font-family:'Noto Serif JP',serif;font-size:clamp(.95rem,2.6vw,1.3rem);font-weight:700;color:#e74c3c;margin-bottom:9px;}
+.urg-b{font-size:.86rem;line-height:1.9;color:rgba(250,247,240,.7);max-width:550px;margin:0 auto;}
+.urg-b strong{color:var(--gold);}
+section{padding:74px 24px;}
+.con{max-width:700px;margin:0 auto;}
+.sl{font-family:'Cormorant Garamond',serif;font-size:.75rem;letter-spacing:.3em;color:var(--gold);text-transform:uppercase;margin-bottom:9px;}
+.st{font-family:'Noto Serif JP',serif;font-size:clamp(1.4rem,3.8vw,2.25rem);font-weight:700;line-height:1.45;margin-bottom:32px;}
+.dv{width:38px;height:2px;background:var(--gold);margin:0 0 30px;}
+.dv.c{margin:0 auto 30px;}
+.sym{background:var(--mid);}
+.sgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:9px;}
+@media(min-width:440px){.sgrid{grid-template-columns:repeat(3,1fr);}}
+.sitem{background:rgba(0,0,0,.2);border:1px solid rgba(201,168,76,.1);padding:13px 9px;text-align:center;font-size:.79rem;line-height:1.55;color:rgba(250,247,240,.68);}
+.sitem-star{display:block;color:var(--gold);font-size:.6rem;margin-bottom:5px;}
+.rea{background:var(--char);}
+.cards{display:grid;gap:12px;}
+@media(min-width:560px){.cards{grid-template-columns:1fr 1fr;}}
+.card{background:rgba(255,255,255,.022);border:1px solid rgba(201,168,76,.11);padding:24px 20px;position:relative;overflow:hidden;transition:border-color .3s,background .3s;}
+.card:hover{border-color:rgba(201,168,76,.36);background:rgba(201,168,76,.04);}
+.card::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:var(--gold);opacity:0;transition:opacity .3s;}
+.card:hover::before{opacity:1;}
+.cn{font-family:'Cormorant Garamond',serif;font-size:2.3rem;color:rgba(201,168,76,.14);line-height:1;margin-bottom:7px;}
+.ch{font-family:'Noto Serif JP',serif;font-size:.97rem;font-weight:700;color:var(--gl);margin-bottom:7px;}
+.cb{font-size:.82rem;line-height:1.85;color:rgba(250,247,240,.62);}
+.ach{background:var(--mid);}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:rgba(201,168,76,.09);border:1px solid rgba(201,168,76,.16);}
+.si{background:var(--mid);padding:22px 12px;text-align:center;}
+.sn{font-family:'Cormorant Garamond',serif;font-size:clamp(1.9rem,5vw,2.8rem);color:var(--gold);font-weight:600;line-height:1;display:block;margin-bottom:5px;}
+.slab{font-size:.72rem;color:rgba(250,247,240,.54);line-height:1.55;}
+.doc{background:var(--char);}
+.dcard{border:1px solid rgba(201,168,76,.17);padding:26px 20px;background:rgba(0,0,0,.18);}
+.dname{font-family:'Noto Serif JP',serif;font-size:1.15rem;font-weight:700;color:var(--gl);margin-bottom:4px;}
+.dtitle{font-size:.75rem;color:var(--gold);letter-spacing:.08em;margin-bottom:16px;}
+.dmsg{font-size:.86rem;line-height:1.95;color:rgba(250,247,240,.66);border-left:2px solid rgba(201,168,76,.3);padding-left:15px;font-style:italic;}
+.flow{background:var(--mid);}
+.steps{position:relative;}
+.steps::before{content:'';position:absolute;left:19px;top:0;bottom:0;width:1px;background:linear-gradient(to bottom,var(--gold),rgba(201,168,76,.05));}
+.step{display:flex;gap:18px;padding:19px 0;}
+.snum{width:38px;height:38px;border-radius:50%;background:var(--gold);color:#0f0e0e;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:.98rem;font-weight:600;flex-shrink:0;position:relative;z-index:1;}
+.sc{padding-top:5px;}
+.sh{font-family:'Noto Serif JP',serif;font-weight:700;font-size:.93rem;color:var(--cream);margin-bottom:4px;}
+.sb{font-size:.81rem;line-height:1.82;color:rgba(250,247,240,.56);}
+.sb strong{color:var(--gl);}
+.voi{background:var(--char);}
+.testis{display:grid;gap:12px;}
+.testi{background:rgba(0,0,0,.24);border-left:3px solid var(--gold);padding:20px 16px;}
+.tt{font-size:.85rem;line-height:1.95;color:rgba(250,247,240,.7);margin-bottom:11px;}
+.tm{font-size:.71rem;color:var(--gold);letter-spacing:.07em;}
+.cta{background:linear-gradient(135deg,#161408,#1c190d);border-top:1px solid rgba(201,168,76,.18);border-bottom:1px solid rgba(201,168,76,.18);text-align:center;}
+.csub{font-size:.85rem;color:rgba(250,247,240,.6);line-height:1.9;margin-bottom:30px;max-width:440px;margin-left:auto;margin-right:auto;}
+.cbtns{display:flex;flex-direction:column;align-items:center;gap:13px;}
+.cbtns .btng,.cbtns .btnl{width:100%;max-width:330px;justify-content:center;padding:17px 18px;}
+@media(min-width:540px){.cbtns{flex-direction:row;justify-content:center;}.cbtns .btng,.cbtns .btnl{width:auto;max-width:none;}}
+.info{background:var(--mid);}
+.itable{width:100%;border-collapse:collapse;font-size:.85rem;}
+.itable tr{border-bottom:1px solid rgba(201,168,76,.09);}
+.itable th{padding:12px 0;text-align:left;width:32%;color:var(--gold);font-weight:500;vertical-align:top;}
+.itable td{padding:12px 0;color:rgba(250,247,240,.68);line-height:1.7;}
+.itable td a{color:var(--gl);text-decoration:none;}
+footer{background:#0a0907;border-top:1px solid rgba(201,168,76,.1);padding:26px 24px 86px;text-align:center;}
+.fn{font-family:'Noto Serif JP',serif;font-size:.98rem;font-weight:700;color:var(--gold);margin-bottom:5px;}
+.fc{font-size:.72rem;color:var(--muted);}
+.rev{opacity:0;transform:translateY(16px);transition:opacity .65s ease,transform .65s ease;}
+.rev.v{opacity:1;transform:none;}
+</style>
+</head>
+<body>
+
+<section class="hero">
+<div class="hbg"></div>
+<div class="hline"></div>
+<div class="hi con">
+  <div class="badge"><span class="dot"></span>交通事故治療 専門対応 ― 姫路市飾磨区</div>
+  <p class="hen">Traffic Accident Treatment — Hikari Shinkyu Seikotsuin</p>
+  <h1 class="htitle">
+    <span class="g">事故後の痛みを、</span>
+    一人で抱え込まないでください。
+    <span class="s">むち打ち・腰痛・しびれを根本から治します。</span>
+  </h1>
+  <div class="hzero"><span class="hzero-dot"></span>自賠責保険を使えば 治療費は自己負担0円</div>
+  <p class="hdesc">交通事故の損傷は、<strong>受傷直後より数日後から痛みが強くなる</strong>ことが多くあります。「病院でレントゲン異常なし」と言われた症状もお任せください。<strong>1,000件以上の治療実績</strong>でしっかりサポートします。</p>
+  <div class="hctas">
+    <a href="tel:0792289687" class="btng">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="19" height="19"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.05 12.05 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.05 12.05 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+      079-228-9687
+    </a>
+    <a href="https://lin.ee/rUObbV0" class="btnl">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="19" height="19"><path d="M12 .572C5.385.572 0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.07 9.436-6.975C23.176 14.393 24 12.458 24 10.314 24 4.943 18.615.572 12 .572z"/></svg>
+      LINEで無料相談
+    </a>
+  </div>
+  <div class="htrust">
+    <div class="chip"><span class="chip-check">&#10003;</span>自賠責・任意保険対応</div>
+    <div class="chip"><span class="chip-check">&#10003;</span>窓口負担0円</div>
+    <div class="chip"><span class="chip-check">&#10003;</span>整形外科との併用可</div>
+    <div class="chip"><span class="chip-check">&#10003;</span>LINE予約・待ち時間なし</div>
+    <div class="chip"><span class="chip-check">&#10003;</span>口コミ地域No.1</div>
+  </div>
+</div>
+</section>
+
+<div class="urg">
+  <div class="con">
+    <p class="urg-t">&#9888; 事故後「痛くないから大丈夫」が最も危険です</p>
+    <p class="urg-b">むち打ち・打撲・捻挫は受傷直後に症状が出にくく、<strong>数日〜1週間後から痛みが悪化</strong>するケースが多くあります。放置すると慢性化・後遺症のリスクが高まります。<strong>少しでも気になる症状があれば今すぐご連絡ください。</strong></p>
+  </div>
+</div>
+
+<section class="sym">
+  <div class="con">
+    <p class="sl rev">Symptoms</p>
+    <h2 class="st rev">こんな症状はありませんか？</h2>
+    <div class="dv rev"></div>
+    <div class="sgrid rev">
+      <div class="sitem"><span class="sitem-star">&#10022;</span>頭痛・めまい<br>吐き気</div>
+      <div class="sitem"><span class="sitem-star">&#10022;</span>むちうち<br>首の痛み</div>
+      <div class="sitem"><span class="sitem-star">&#10022;</span>捻挫・打撲</div>
+      <div class="sitem"><span class="sitem-star">&#10022;</span>腕・足の<br>痛み・しびれ</div>
+      <div class="sitem"><span class="sitem-star">&#10022;</span>気分が晴れない</div>
+      <div class="sitem"><span class="sitem-star">&#10022;</span>眠れない</div>
+    </div>
+  </div>
+</section>
+
+<section class="rea">
+  <div class="con">
+    <p class="sl rev">Why Hikari</p>
+    <h2 class="st rev">ひかり鍼灸整骨院が<br>選ばれる4つの理由</h2>
+    <div class="dv rev"></div>
+    <div class="cards">
+      <div class="card rev"><div class="cn">01</div><div class="ch">口コミ地域ナンバーワン</div><div class="cb">他院で改善しない症状や姿勢のゆがみも根本から解消。大手口コミサイトで姫路・飾磨エリア1位を獲得しています。</div></div>
+      <div class="card rev"><div class="cn">02</div><div class="ch">即効性と根本治療を両立</div><div class="cb">即効性の高い施術はもちろん、再発を防ぐために症状の根本原因を追究し、それに応じた治療を優先します。</div></div>
+      <div class="card rev"><div class="cn">03</div><div class="ch">むち打ち治療の専門院</div><div class="cb">後遺症を残さないよう根本治療を実施。「レントゲンで異常なし」と言われた症状も鍼灸×整骨の複合アプローチで対応します。</div></div>
+      <div class="card rev"><div class="cn">04</div><div class="ch">女性も通いやすい環境</div><div class="cb">女性スタッフが在籍。明るく開放的な院内で初めての方も安心。LINE予約で待ち時間なし、整形外科との併用も可能です。</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="ach">
+  <div class="con">
+    <p class="sl rev">Track Record</p>
+    <h2 class="st rev">実績が、安心の証明です。</h2>
+    <div class="dv rev"></div>
+    <div class="stats rev">
+      <div class="si"><span class="sn">1,000+</span><span class="slab">交通事故<br>治療実績</span></div>
+      <div class="si"><span class="sn">2008</span><span class="slab">姫路にて創業<br>地域密着16年以上</span></div>
+      <div class="si"><span class="sn">0円</span><span class="slab">自己負担金<br>自賠責保険適用</span></div>
+      <div class="si"><span class="sn">No.1</span><span class="slab">口コミ評価<br>地域ランキング</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="doc">
+  <div class="con">
+    <p class="sl rev">Director</p>
+    <h2 class="st rev">院長メッセージ</h2>
+    <div class="dv rev"></div>
+    <div class="dcard rev">
+      <div class="dname">新井 裕也</div>
+      <div class="dtitle">ひかり鍼灸整骨院 院長 / 柔道整復師・鍼灸師</div>
+      <p class="dmsg">交通事故にあわれた方の多くは、「病院に行ったけど湿布と痛み止めだけでなかなか良くならない」「天気が悪くなると痛みが増す」「骨に異常はないと言われたけど痛くて仕方ない」といった悩みを抱えておられます。そうした症状こそ、鍼灸と整骨の力が最も発揮できる領域です。後遺症を残さない治療を目指して、全力でサポートします。</p>
+    </div>
+  </div>
+</section>
+
+<section class="flow">
+  <div class="con">
+    <p class="sl rev">Flow</p>
+    <h2 class="st rev">治療開始までの流れ</h2>
+    <div class="dv rev"></div>
+    <div class="steps">
+      <div class="step rev"><div class="snum">1</div><div class="sc"><div class="sh">警察を呼ぶ・事故証明を取得</div><div class="sb"><strong>事故証明がないと保険が使えない</strong>ことがあります。必ず警察に連絡しましょう。</div></div></div>
+      <div class="step rev"><div class="snum">2</div><div class="sc"><div class="sh">相手方の情報・保険会社を確認</div><div class="sb">住所・連絡先・保険会社名と番号を控えておきましょう。保険会社同士で示談交渉を進めてくれます。</div></div></div>
+      <div class="step rev"><div class="snum">3</div><div class="sc"><div class="sh">病院で診断書を取得</div><div class="sb">整骨院での治療を希望する場合でも、まず病院で診断を受ける必要があります。</div></div></div>
+      <div class="step rev"><div class="snum">4</div><div class="sc"><div class="sh">警察署で人身事故に切り替え</div><div class="sb">診断書を持って管轄の警察署へ行き、事故を人身事故として処理してもらいましょう。</div></div></div>
+      <div class="step rev"><div class="snum">5</div><div class="sc"><div class="sh">保険会社にひかり整骨院を伝える</div><div class="sb">整骨院での治療を希望する旨と、当院の名前・電話番号をお伝えください。</div></div></div>
+      <div class="step rev"><div class="snum">6</div><div class="sc"><div class="sh">治療開始 ― 費用は一切かかりません</div><div class="sb">保険会社から当院へ連絡が届き次第、治療をスタートできます。手続きに不安な方は院がサポートします。</div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="voi">
+  <div class="con">
+    <p class="sl rev">Patient Voice</p>
+    <h2 class="st rev">患者様の声</h2>
+    <div class="dv rev"></div>
+    <div class="testis">
+      <div class="testi rev"><p class="tt">事故に遭い飾磨の整形外科に行きましたが湿布しかもらえなくて、ネットで探すと家からも近いひかりさんがあったので通わせてもらっています。他の整形ともたくさん連携しており転院の相談もできます。待ち時間もなく予約制なのでありがたいです。</p><p class="tm">男性・飾磨区在住 / 交通事故治療</p></div>
+      <div class="testi rev"><p class="tt">自転車で通学中に自動車と接触して事故の通院で通っています。家からも近く先生もいい先生なので通いやすいし、LINE予約ができるので便利です。</p><p class="tm">10代・学生 / むち打ち・打撲</p></div>
+      <div class="testi rev"><p class="tt">共働きで時間の融通が効かない我が家にとって、LINE予約で待ち時間なく通えるひかりさんはとても助かっています。最初は妻の骨盤矯正から始まり、今は家族全員が通っています。</p><p class="tm">40代男性・姫路市在住 / 家族全員で通院</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="con">
+    <p class="sl rev">Free Consultation</p>
+    <h2 class="st rev">まずは相談だけでも、大丈夫です。</h2>
+    <div class="dv c rev"></div>
+    <p class="csub rev">「保険が使えるか分からない」「すでに他院に通っている」など、どんなご事情でもお気軽にご連絡ください。電話でもLINEでもすぐに対応します。</p>
+    <div class="cbtns rev">
+      <a href="tel:0792289687" class="btng">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="19" height="19"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.05 12.05 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.05 12.05 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+        079-228-9687 に電話する
+      </a>
+      <a href="https://lin.ee/rUObbV0" class="btnl">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="19" height="19"><path d="M12 .572C5.385.572 0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.07 9.436-6.975C23.176 14.393 24 12.458 24 10.314 24 4.943 18.615.572 12 .572z"/></svg>
+        LINEで無料相談
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="info">
+  <div class="con">
+    <p class="sl rev">Access &amp; Hours</p>
+    <h2 class="st rev">院内情報・アクセス</h2>
+    <div class="dv rev"></div>
+    <table class="itable rev">
+      <tr><th>院名</th><td>ひかり鍼灸整骨院（HIKARI Body &amp; Resort）</td></tr>
+      <tr><th>住所</th><td>〒672-8043 兵庫県姫路市飾磨区上野田3丁目81番地3</td></tr>
+      <tr><th>電話</th><td><a href="tel:0792289687">079-228-9687</a></td></tr>
+      <tr><th>診療時間</th><td>平日 8:30〜12:00 / 15:00〜19:30<br>土・祝 8:30〜12:00 / 14:00〜17:30</td></tr>
+      <tr><th>定休日</th><td>木曜・日曜</td></tr>
+      <tr><th>予約方法</th><td>LINE予約・ネット予約（待ち時間なし）</td></tr>
+      <tr><th>対応保険</th><td>自賠責保険・任意保険・労災保険・健康保険</td></tr>
+      <tr><th>Googleマップ</th><td><a href="https://goo.gl/maps/XyEPMp9cR56K5izc9" target="_blank" rel="noopener">地図を開く →</a></td></tr>
+    </table>
+  </div>
+</section>
+
+<footer>
+  <div class="fn">ひかり鍼灸整骨院 — HIKARI Body &amp; Resort</div>
+  <div class="fc">© 2024 Hikari Body &amp; Resort. All rights reserved.</div>
+</footer>
+
+<div class="sticky">
+  <a href="tel:0792289687" class="tel">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.05 12.05 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.05 12.05 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+    079-228-9687
+  </a>
+  <a href="https://lin.ee/rUObbV0" class="lin">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .572C5.385.572 0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.07 9.436-6.975C23.176 14.393 24 12.458 24 10.314 24 4.943 18.615.572 12 .572z"/></svg>
+    LINEで予約
+  </a>
+</div>
+
+<script>
+const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('v');obs.unobserve(e.target);}});},{threshold:.1});
+document.querySelectorAll('.rev').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>

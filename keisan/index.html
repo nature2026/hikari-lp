@@ -67,13 +67,12 @@ body{
 .calc__note{font-size:11px;line-height:1.75;color:var(--ink-s);margin:14px 0 0;}
 .calc__note strong{color:var(--ink);}
 
-/* 院からの数字が入っているときの表示 */
+/* 入力のご案内 */
 .pre{
-  display:none;margin:0 0 14px;padding:10px 12px;border-radius:10px;
+  margin:0 0 14px;padding:10px 12px;border-radius:10px;
   background:var(--bg-warm);border:1px solid #f0ddc6;
   font-size:12.5px;line-height:1.7;color:#8a5a28;
 }
-.pre.on{display:block;}
 
 /* 弁護士基準の注意（下段） */
 .law{
@@ -106,22 +105,6 @@ body{
 /* ---------- フッター ---------- */
 .ft{margin-top:20px;text-align:center;font-size:11.5px;line-height:1.8;color:var(--ink-s);}
 .ft a{color:var(--navy);}
-
-/* ---------- 院用リンク作成（?staff=1 のときだけ） ---------- */
-.mk{display:none;margin-top:22px;background:#fff;border:2px dashed var(--navy-l);border-radius:12px;padding:16px;}
-.mk.on{display:block;}
-.mk__t{margin:0 0 6px;font-size:14px;font-weight:900;color:var(--navy-d);}
-.mk__d{margin:0 0 10px;font-size:12px;line-height:1.7;color:var(--ink-s);}
-.mk__u{
-  width:100%;font-family:inherit;font-size:12px;padding:10px;border:2px solid var(--bd);
-  border-radius:9px;color:var(--navy-d);background:var(--bg-tint);word-break:break-all;resize:vertical;
-}
-.mk__b{
-  margin-top:8px;width:100%;padding:12px;border:0;border-radius:10px;background:var(--navy);
-  color:#fff;font-family:inherit;font-size:14px;font-weight:700;cursor:pointer;
-}
-.mk__b:active{transform:translateY(1px);}
-.mk__s{margin:8px 0 0;font-size:12px;font-weight:700;color:var(--line-d);min-height:1.2em;}
 
 @media (min-width:768px){
   .calc{padding:30px 32px;margin-top:24px;}
@@ -157,7 +140,7 @@ body{
     <p class="calc__ttl">通院日数から、慰謝料の目安を計算する</p>
     <p class="calc__lead">当院が金額を決めるわけではありませんが、<strong>自賠責保険の基準にあてはめると、おおよその見当はつきます。</strong>下の数字を入れてみてください。</p>
 
-    <p class="pre" id="preMsg">当院からお伝えした<strong>通院日数と治療期間</strong>をあらかじめ入れてあります。数字を変えると、その場で計算し直されます。</p>
+    <p class="pre">下の数字は<strong>例として入れてあるもの</strong>です。当院からお伝えした「通院した日数」と「治療期間」に書き換えてください。入力するとその場で計算されます。</p>
 
     <div class="calc__form">
       <label class="calc__row">
@@ -195,15 +178,6 @@ body{
     </a>
   </div>
 
-  <!-- ---------- 院のスタッフ用：送信リンクを作る（?staff=1） ---------- -->
-  <div class="mk" id="maker">
-    <p class="mk__t">【院用】患者様に送るリンクを作る</p>
-    <p class="mk__d">上の2つの数字を患者様の実数に合わせてから、下のボタンを押してコピーしてください。患者様が開くと、その数字が入った状態で表示されます。（この欄は患者様には表示されません）</p>
-    <textarea class="mk__u" id="mkUrl" rows="3" readonly></textarea>
-    <button class="mk__b" id="mkBtn" type="button">リンクをコピーする</button>
-    <p class="mk__s" id="mkMsg"></p>
-  </div>
-
   <p class="ft">
     ひかり鍼灸整骨院　姫路市飾磨区<br>
     <a href="tel:079-228-9687">079-228-9687</a>　／　<a href="https://hikariseikotsuin.jp/traffic2026/">交通事故のページ</a>
@@ -217,7 +191,6 @@ body{
   var period    = document.getElementById('calcPeriod');
   var amountEl  = document.getElementById('calcAmount');
   var formulaEl = document.getElementById('calcFormula');
-  var preMsg    = document.getElementById('preMsg');
 
   var UNIT  = 4300;
   var LIMIT = 1200000;  /* 自賠責の傷害部分の支払限度額 */
@@ -251,60 +224,14 @@ body{
       txt += '\n※自賠責の限度額（傷害部分120万円）を超えています。施術費や休業損害なども含めた合計に上限があります。';
     }
     formulaEl.textContent = txt;
-
-    buildUrl();
   }
-
-  /* ---- URLの数字で初期値を差し替える（?v=通院日数 &p=治療期間） ---- */
-  var q = new URLSearchParams(location.search);
-  function setFromQuery(key, el, max) {
-    var raw = q.get(key);
-    if (raw === null) return false;
-    var n = parseInt(raw, 10);
-    if (isNaN(n) || n < 0) return false;
-    el.value = Math.min(n, max);
-    return true;
-  }
-  var gotV = setFromQuery('v', visits, 400);
-  var gotP = setFromQuery('p', period, 900);
-  if (gotV || gotP) preMsg.classList.add('on');
 
   [visits, period].forEach(function (el) {
     el.addEventListener('input', update);
     el.addEventListener('change', update);
+    /* タップしたら数字を全選択＝上書きしやすくする */
+    el.addEventListener('focus', function () { el.select(); });
   });
-
-  /* ---- 院用：リンク作成欄 ---- */
-  var maker = document.getElementById('maker');
-  var mkUrl = document.getElementById('mkUrl');
-  var mkBtn = document.getElementById('mkBtn');
-  var mkMsg = document.getElementById('mkMsg');
-  var isStaff = q.get('staff') === '1';
-  if (isStaff) maker.classList.add('on');
-
-  function buildUrl() {
-    if (!isStaff) return;
-    var base = location.href.split('?')[0].split('#')[0];
-    mkUrl.value = base + '?v=' + toInt(visits, 400) + '&p=' + toInt(period, 900);
-  }
-
-  if (isStaff) {
-    mkBtn.addEventListener('click', function () {
-      mkUrl.select();
-      mkUrl.setSelectionRange(0, 99999);
-      var ok = false;
-      try { ok = document.execCommand('copy'); } catch (e) {}
-      if (navigator.clipboard) {
-        navigator.clipboard.writeText(mkUrl.value).then(function () {
-          mkMsg.textContent = 'コピーしました。LINEに貼り付けてください。';
-        }, function () {
-          mkMsg.textContent = ok ? 'コピーしました。' : '上の文字を長押しして選択・コピーしてください。';
-        });
-      } else {
-        mkMsg.textContent = ok ? 'コピーしました。' : '上の文字を長押しして選択・コピーしてください。';
-      }
-    });
-  }
 
   update();
 })();

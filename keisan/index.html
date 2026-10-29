@@ -63,9 +63,10 @@ body{
 .calc__note{font-size:11.5px;line-height:1.8;color:var(--ink-s);margin:15px 0 0;}
 
 /* 弁護士の基準について（院からの添え書き） */
-.law{margin-top:16px;padding-top:14px;border-top:1px solid var(--bd);}
+.law{margin-top:18px;padding:2px 0 2px 14px;border-left:3px solid var(--accent);}
 .law p{margin:0;font-size:14px;line-height:1.95;color:var(--ink);}
 .law p + p{margin-top:5px;}
+.law p.law__hl{color:#b45812;font-weight:700;}
 
 .btn{
   display:flex;flex-direction:column;align-items:center;justify-content:center;
@@ -139,12 +140,12 @@ body{
     <p class="calc__note">
       ※2020年4月1日以降に起きた事故の基準（1日4,300円）で計算しています。それ以前の事故は1日4,200円です。<br>
       ※自賠責保険には限度額（傷害部分120万円）があり、施術費や休業損害なども含めた合計で計算されます。<br>
-      ※任意保険の基準、弁護士の基準では金額が変わります。<br>
+      ※任意保険の基準では金額が変わります。<br>
       ※実際の金額は保険会社との間で決まります。当院が算定したり、お約束するものではありません。
     </p>
 
     <div class="law">
-      <p>弁護士を活用された場合は、ここでの計算とは基準が異なります。</p>
+      <p class="law__hl">弁護士を活用された場合は、ここでの計算とは基準が異なります。</p>
       <p>ご不明な点は、ご来院の際にご相談くださいませ。</p>
     </div>
 
